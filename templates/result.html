@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body{background-color:#FFEBEE}
+      .card{width:500px;background-color:#fff;border:none;border-radius: 12px}
+      .card-title{font-size: 20px;}
+      .form-control{margin-top: 10px;height: 48px;border: 2px solid #eee;border-radius: 10px}.form-control:focus{box-shadow: none;border: 2px solid #039BE5}
+      .confirm-button{height: 50px;border-radius: 10px}
+    </style>
+  </head>
+  <body>  
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+      <div class="card px-1 py-4">
+          <div class="card-body">
+            <div>
+              <a href="http://127.0.0.1:5000/" ><i class="fa fa-arrow-left"></i><span>  Back</span></a>
+            </div>
+              <center><h6 class="card-title mb-3">Your penguin's species is:</h6></center>
+              <center><img class="mt-1 mb-1" src="{{ url_for('static', filename='img/penguins_result.jpg') }}" alt="penguins" width="250px"></center>
+              <center><h4 class="information mt-4 mb-3">{{ prediction }}</h4></center>
+              
+          </div>
+      </div>
+  </div>
+  </body> 
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body{background-color:#FFEBEE}
+      .card{width:500px;background-color:#fff;border:none;border-radius: 12px}
+      .card-title{font-size: 20px;}
+      .form-control{margin-top: 10px;height: 48px;border: 2px solid #eee;border-radius: 10px}.form-control:focus{box-shadow: none;border: 2px solid #039BE5}
+      .confirm-button{height: 50px;border-radius: 10px}
+    </style>
+  </head>
+  <body>  
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+      <div class="card px-1 py-4">
+          <div class="card-body">
+              <center><h6 class="card-title mb-3">PENGUINS SEGMENTATION</h6></center>
+              <center><p>the species of penguin will be predicted based on your data</p></center>
+              <center><img class="mt-1 mb-1" src="{{ url_for('static', filename='img/penguins.jpg') }}" alt="penguins" width="250px"></center>
+              <center><h6 class="information mt-4 mb-3">Enter your penguin's data below:</h6></center>
+              <form action="/result" method="POST"> 
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="form-group">
+                        <input class="form-control" id="length" name="length" type="number" placeholder="Culment length in mm">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="form-group">
+                          <div class="input-group"> 
+                            <input class="form-control" type="number" id="depth" name="depth" placeholder="Culment depth in mm">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <button class="btn btn-primary btn-block confirm-button" type="submit" value="Submit">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  </body> 
+</html>
